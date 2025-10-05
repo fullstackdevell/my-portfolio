@@ -1,15 +1,18 @@
-import React from 'react';
+import React from "react";
+import Header from "../components/Header";
+import HeroSection from "../components/HeroSection";
+import AboutMe from "../components/AboutMe";
 
 function HomePage() {
-    return (
-        <div className="bg-dark-bg text-white min-h-screen">
-            <main>
-                <h1>VIKTORIIA VINNYKOVA</h1>
-                <p>Junior Full-Stack Developer</p>
-                <p>Passionate builder focused on transforming complex challenges into efficient, user-centric web and mobile solutions.</p>
-            </main>
-        </div>
-    )
+  return (
+    <div className="bg-dark-bg text-white min-h-screen">
+      <Header />
+      <main className="max-w-6xl mx-auto px-8">
+        <HeroSection />
+        <AboutMe />
+      </main>
+    </div>
+  );
 }
 
-export default HomePage; 
+export default HomePage;

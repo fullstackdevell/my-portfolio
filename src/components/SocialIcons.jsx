@@ -1,7 +1,7 @@
 import React from 'react';
 
 function SocialIcons() {
-    const iconLinkClasses = "text-white hover:text-mint transition duration-300"; 
+    const iconLinkClasses = "text-white hover:text-purple transition duration-300"; 
 
     return (
         <div className="flex space-x-8 mt-12"> 

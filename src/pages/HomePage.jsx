@@ -2,6 +2,9 @@ import React from "react";
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import AboutMe from "../components/AboutMe";
+import Projects from "../components/Projects";
+import ContactMe from "../components/ContactMe";
+import Footer from "../components/Footer";
 
 function HomePage() {
   return (
@@ -10,7 +13,10 @@ function HomePage() {
       <main className="max-w-6xl mx-auto px-8">
         <HeroSection />
         <AboutMe />
+        <Projects />
+        <ContactMe />
       </main>
+      <Footer />
     </div>
   );
 }

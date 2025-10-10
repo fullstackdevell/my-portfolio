@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         'dark-bg': '#1E1E1E',
-        'mint': '#00C8B3',
+        'purple': '#5856D6',
       },
       fontFamily: {
         'poetsen': ['Poetsen One', 'sans-serif'],

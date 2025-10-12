@@ -1,5 +1,5 @@
 import React from 'react';
-import TimelineItem from '../components/TimeLineItem.jsx';
+import TimelineItem from '../components/TimelineItem.jsx';
 
 function ExperiencePage({ id }) {
     // Array of placeholder data for the roadmap/timeline

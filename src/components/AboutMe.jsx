@@ -1,6 +1,33 @@
 import React from "react";
 import SkillsBox from "./SkillsBox";
 
+const developerProfile = {
+  codename: "VIKTORIIA_DEV",
+  origin: "Warsaw, Poland (GDG Warsaw Member)",
+  role: "Junior Full-Stack Developer",
+  
+  stack: {
+    languages: ["JavaScript", "HTML/CSS", "SQL", "Swift/SwiftUI"],
+    frameworks: ["React", "Node.js", "Express", "Next.js", "TailwindCSS"],
+    databases: ["MongoDB", "PostgreSQL"],
+  },
+  
+  traits: [
+    "efficient builder",
+    "user-centric solutions advocate",
+    "former GDG Lead (Team Management)",
+    "UI/UX design awareness",
+    "Git/GitHub collaboration expert",
+    "rapid learner",
+  ],
+  
+  missionStatement: 
+    "Transforming complex challenges into scalable, high-impact web and mobile solutions.",
+  availability: "Available for challenging, real-world projects & high-impact developer roles.",
+};
+
+const profileCodeString = `const aboutMe: DeveloperProfile = ${JSON.stringify(developerProfile, null, 2).replace(/"/g, '')};`;
+
 function AboutMe() {
     return (
         <section className="py-20">

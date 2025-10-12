@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-function ContactMe () {
+function ContactMe ({id}) {
     // Holds the current values of the form inputs
     const [formData, setFormData] = useState({
         name: '',
@@ -11,25 +11,34 @@ function ContactMe () {
     // State to provide feedback to the user
     const [status, setStatus] = useState('');
 
-    const inputClasses = "bg-dark-bg border border-gray-700 text-white font-roboto-mono p-4 rounded-lg placeholder-gray-500 focus:border-purple focus:outline-none transition duration-200 w-full";
+    const inputClasses = "bg-dark-bg border border-gray-500 text-white font-roboto-mono p-4 rounded-lg placeholder-gray-500 focus:border-purple focus:outline-none transition duration-200 w-full";
     const labelClasses = "font-roboto-mono text-white text-sm mb-1 block";
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     }
 
+    // Step 2: Helper function to URL-encode the form data
+    // This format is required by Netlify when submitting via JavaScript's fetch API
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+    }
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('Sending...');
-        const endPoint = "";
 
+        // Step 3: Use the fetch API to submit data
         try {
-        const response = await fetch(endPoint, {
+        const response = await fetch("/", { // Netlify submissions should go to the root path
             method: 'POST',
-            body: JSON.stringify(formData), // Convert the JavaScript object to a JSON string
+            // Step 4: Include the 'form-name' and use the URL-encoded data for the body
+            body: encode({ "form-name": "contact", ...formData }),
             headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                // Step 5: IMPORTANT! Change content type to URL-encoded
+                'Content-Type': 'application/x-www-form-urlencoded'
             }
         });
 
@@ -37,18 +46,23 @@ function ContactMe () {
             setStatus('Message sent successfully!');
             setFormData({ name: '', email: '', message: '' });
         } else {
+            // Netlify usually redirects on success, but this catches network errors or other issues
             setStatus('Failed to send message. Please try again.');
         }
     } catch (error) {
-        setStatus('An error occurred. Check your network.');
+        setStatus('An error occurred. Check your network or Netlify settings.');
+        console.error("Form submission error:", error);
     }
 }
 
 return (
-        <section>
+        <section id={id}>
             <h2 className="font-roboto-mono text-2xl tracking-wide mb-8">Contact Me</h2>
 
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true">
+                {/* Step 1: Add a hidden input field that Netlify uses to identify the form during the build process */}
+                <input type="hidden" name="form-name" value="contact" />
+                
                 {/* Two-column layout for Name and Email inputs on desktop */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>

@@ -8,13 +8,13 @@ import Footer from "../components/Footer";
 
 function HomePage() {
   return (
-    <div className="bg-dark-bg text-white min-h-screen">
+    <div id="home" className="bg-dark-bg text-white min-h-screen">
       <Header />
       <main className="max-w-6xl mx-auto px-8">
         <HeroSection />
         <AboutMe />
-        <Projects />
-        <ContactMe />
+        <Projects id="projects" />
+        <ContactMe id="contact" />
       </main>
       <Footer />
     </div>

@@ -29,7 +29,7 @@ function ExperiencePage({ id }) {
 
     return (
         <section id={id} className="py-12 px-4 md:px-8 bg-dark-bg min-h-screen">
-            <h2 className={`font-mono text-4xl font-extrabold tracking-wide mb-12 border-b-4 border-purple-400 pb-2 text-white text-center`}>My Experience Roadmap</h2>
+            <h2 className="font-mono text-4xl font-extrabold tracking-wide mb-12 border-b-4 border-purple-400 pb-2 text-white text-center>My Experience Roadmap"></h2>
             
             <div className="max-w-3xl mx-auto pt-10">
                 {experienceData.map((item, index) => (
@@ -47,10 +47,10 @@ function ExperiencePage({ id }) {
                 <div className="flex mb-8">
                     <div className="flex flex-col items-center mr-6">
                         {/* Final dot uses a different accent color */}
-                        <div className={`w-4 h-4 rounded-full bg-purple border-2 border400 border-2 border-white/50 z-10`}></div>
+                        <div className="w-4 h-4 rounded-full bg-purple-500 border-2 border-white/50 z-10"></div>
                     </div>
                     <div className="flex-grow pt-1">
-                        <p className={`text-lg font-bold text-purple-400`}>The Journey Continues...</p>
+                        <p className="text-lg font-bold text-purple-400">The Journey Continues...</p>
                     </div>
                 </div>
             </div>

@@ -56,26 +56,24 @@ function ContactMe ({id}) {
     }
 
 return (
-        <section id={id} className="p-8">
-            <h2 className="font-mono text-3xl text-white tracking-wide mb-8 border-b-2 border-purple pb-2">Contact Me</h2>
+        <section id={id}>
+            <h2 className="font-roboto-mono text-2xl tracking-wide mb-8">Contact Me</h2>
 
-            {/* The form tag needs 'name' and 'data-netlify' for Netlify to detect it statically */}
             <form onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true">
-                
-                {/* 1. REQUIRED HIDDEN FIELD: Netlify scans the build output for this static field to register the form. */}
+                {/* Step 1: Add a hidden input field that Netlify uses to identify the form during the build process */}
                 <input type="hidden" name="form-name" value="contact" />
 
+                {/* Two-column layout for Name and Email inputs on desktop */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    {/* Name Input */}
                     <div>
                         <label htmlFor="name" className={labelClasses}>Name</label>
                         <input
                             type="text"
                             id="name"
-                            name="name" // Matches the key in formData and the form submission
+                            name="name" // The name must match the key in formData
                             value={formData.name}
-                            onChange={handleChange}
-                            placeholder="Your Full Name"
+                            onChange={handleChange} // Links the input to the state handler
+                            placeholder="Your Name"
                             required
                             className={inputClasses}
                         />
@@ -90,7 +88,7 @@ return (
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
-                            placeholder="your.email@example.com"
+                            placeholder="Your Email"
                             required
                             className={inputClasses}
                         />
@@ -103,26 +101,26 @@ return (
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
-                        placeholder="Type your message here..."
+                        placeholder="Hello there, I would like to ask you about..."
                         required
                         maxLength="500"
                         rows="6"
                         className={`${inputClasses} resize-none`}
                     ></textarea>
-                    {/* Character counter */}
-                    <p className="text-right text-sm font-mono text-gray-400 mt-1">{formData.message.length}/500 characters</p>
+                    {/* Character counter (uses the length of the state value) */}
+                    <p className="text-right text-sm font-roboto-mono text-gray-500 mt-1">{formData.message.length}/500 characters</p>
                 </div>
                 {/* Submit Button Area */}
-                <div className="flex justify-between items-center">
-                    {/* Display status messages */}
-                    {status && <p className="mr-4 text-base font-mono text-[#a78bfa]">{status}</p>}
+                <div className="flex justify-end items-center">
+                    {/* Display status messages (Sending, Success, Failure) */}
+                    {status && <p className="mr-4 text-sm font-roboto-mono text-purple">{status}</p>}
                     
+                    {/* Send Button: Styled using the dark button theme from previous sections */}
                     <button
                         type="submit"
-                        className="bg-[#272727] text-white font-mono text-base font-bold px-8 py-3 rounded-lg border-2 border-[#6d28d9] hover:bg-[#6d28d9] hover:text-black transition duration-300 flex items-center shadow-lg"
-                        disabled={status === 'Sending...'}
+                        className="bg-[#272727] text-white font-roboto-mono text-base font-bold px-6 py-3 rounded-lg hover:bg-purple transition duration-300 flex items-center"
                     >
-                        Send Message
+                        Send 
                     </button>
                 </div>
             </form>

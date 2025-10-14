@@ -15,12 +15,13 @@ function ProjectCard({ project }) {
             <div 
                 className="absolute inset-0 
                            bg-gradient-to-t 
-                           from-black/70 to-transparent 
-                           opacity-100 transition-opacity duration-300"
+                           from-black/80 to-transparent 
+                           opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             />
+            
             <div className="absolute inset-x-0 bottom-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500"> 
                 <h3 className="text-xl font-poetsen text-white mb-1">{project.title}</h3>
-                <p className="text-sm text-gray-300 mb-3">{project.description}</p>
+                <p className="text-sm text-white mb-3">{project.description}</p>
                 <div className="flex flex-wrap gap-2">{project.tags.map((tag, index) => (
                     <span key={index} className={`${tagBg} ${tagClasses}`}>{tag}</span>
                 ))}</div>

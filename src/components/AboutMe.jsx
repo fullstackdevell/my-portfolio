@@ -5,7 +5,7 @@ function AboutMe() {
   return (
     <section className="py-20">
       <h2 className="font-roboto-mono text-2xl tracking-wide mb-8">About Me</h2>
-      <div className="flex justify-between items-start gap-x-12">
+      <div className="flex flex-col md:flex-row justify-between items-start gap-y-12 md:gap-x-12">
         <div className="max-w-2xl">
           <p className="font-roboto text-base leading-relaxed mb-6">
             I am a Full-Stack Developer with a Master’s degree in Computer

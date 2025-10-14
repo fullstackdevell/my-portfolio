@@ -4,8 +4,8 @@ import SocialIcons from "./SocialIcons";
 
 function HeroSection() {
   return (
-    <section className="flex justify-between items-center py-20">
-      <div className="max-w-[520px]">
+    <section className="flex flex-col md:flex-row justify-between items-center py-20 gap-y-12">
+      <div className="max-w-[520px] order-2 md:order-1 mx-auto text-center md:mx-0 md:text-left">
         <h1 className="font-poetsen text-3xl tracking-wide">
           VIKTORIIA VINNYKOVA
         </h1>
@@ -16,9 +16,11 @@ function HeroSection() {
           Passionate builder focused on transforming complex challenges into
           efficient, user-centric web and mobile solutions.
         </p>
-        <SocialIcons />
+        <div className="mt-8 flex justify-center md:justify-start">
+          <SocialIcons />
+        </div>
       </div>
-      <div className="flex-shrink-0 ml-8">
+      <div className="flex-shrink-0 order-1 md:order-2 mx-auto md:ml-8">
         <img
           src={profilePic}
           alt="Viktoriia Vinnykova"

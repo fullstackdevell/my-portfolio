@@ -4,7 +4,7 @@ function SocialIcons() {
     const iconLinkClasses = "text-white hover:text-purple transition duration-300"; 
 
     return (
-        <div className="flex space-x-8 mt-12"> 
+        <div className="flex space-x-8"> 
             
             <a href="https://github.com/fullstackdevell" target="_blank" rel="noopener noreferrer" className={iconLinkClasses}>
                 <svg 

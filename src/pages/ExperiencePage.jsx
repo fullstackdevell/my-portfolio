@@ -4,27 +4,27 @@ import TimelineItem from '../components/TimelineItem.jsx';
 function ExperiencePage({ id }) {
     // Array of placeholder data for the roadmap/timeline
     const experienceData = [
-        {
-            title: "Current Focus: Project X Development",
-            company: "Personal/Freelance",
-            duration: "2024 - Present",
-            position: "Lead Developer",
-            description: "Currently focusing on advanced state management and deploying a full-stack application using modern React and serverless functions. This is where you will detail specific tech stacks and recent accomplishments."
-        },
-        {
-            title: "Previous Role / Major Project",
-            company: "Company Name Placeholder",
-            duration: "2022 - 2024",
-            position: "Senior Front-End Engineer",
-            description: "Describe your major responsibilities, technologies used (e.g., React, TypeScript, Tailwind), and key achievements during this period. Keep descriptions focused and professional."
-        },
-        {
-            title: "Early Career / Foundation Building",
-            company: "Initial Role/Education",
-            duration: "2020 - 2022",
-            position: "Junior Developer / Graduated",
-            description: "Detail the foundations of your technical skills, relevant coursework, or early contributions. This sets the stage for your career growth and learning journey."
-        },
+        // {
+        //     title: "Current Focus: Project X Development",
+        //     company: "Personal/Freelance",
+        //     duration: "2024 - Present",
+        //     position: "Lead Developer",
+        //     description: "Currently focusing on advanced state management and deploying a full-stack application using modern React and serverless functions. This is where you will detail specific tech stacks and recent accomplishments."
+        // },
+        // {
+        //     title: "Previous Role / Major Project",
+        //     company: "Company Name Placeholder",
+        //     duration: "2022 - 2024",
+        //     position: "Senior Front-End Engineer",
+        //     description: "Describe your major responsibilities, technologies used (e.g., React, TypeScript, Tailwind), and key achievements during this period. Keep descriptions focused and professional."
+        // },
+        // {
+        //     title: "Early Career / Foundation Building",
+        //     company: "Initial Role/Education",
+        //     duration: "2020 - 2022",
+        //     position: "Junior Developer / Graduated",
+        //     description: "Detail the foundations of your technical skills, relevant coursework, or early contributions. This sets the stage for your career growth and learning journey."
+        // },
     ];
 
     return (

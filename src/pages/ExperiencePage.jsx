@@ -7,15 +7,15 @@ const initialExperienceData = [
         company: "Google Developers Groups Warsaw",
         duration: "August 2025 - Present",
         position: "Community Organizer",
-        description: "Leading a large-scale developer community in Warsaw. Responsibilities include organizing major tech events (e.g., DevFests), managing partnerships, and driving technical content strategy to support local developers."
+        description: "As a GDG Organizer, I help plan and run tech events like DevFest and SheDev, working to bring the local developer community together. I also get an amazing opportunity to attend all the speaker sessions and workshops organised by the community and get to learn from the best experts in tech. My main focus is marketing and communications — promoting events, driving ticket sales, and finding creative ways to reach new audiences. I also built the DevFest 2025 event website using no-code tools and contribute to the design and branding of our events. Through this role, I’ve learned how to network with industry experts, manage community engagement, and grow a tech community through meaningful connections."
     },
     {
-        category: ["Coding"],
+        category: ["Coding", "Marketing"],
         title: "Google Developers Group On Campus PJATK Lead",
         company: "Google Developers Group On Campus PJATK",
         duration: "September 2024 - June 2025",
         position: "GDG Lead (marketing department)",
-        description: "Managed a core team focused on specific technology tracks (e.g., Firebase, Flutter). Organized and hosted monthly workshops, providing mentorship and technical guidance to aspiring developers."
+        description: "As a co-lead of the GDG club at PJATK, I actively participated in the recruitment of a 21-member team across development, marketing, and management departments. I collaborated with my co-leads and our core team to successfully organize and execute numerous tech events.In this role, I actively contributed to a university-focused mobile app by gathering feedback and turning it into documentation and UI/UX design. I also took the initiative to speak at various events, including a presentation on front-end technologies at SheDev Warsaw 2025. My experience also includes leading our team's volunteer efforts at major conferences like DevFest 2023 in Warsaw. I ensured volunteers performed their duties, everything ran smoothly, and small issues were resolved quickly. This role allowed me to develop a unique blend of technical skills, leadership, and community-building expertise."
     },
     {
         category: ["Coding"],
@@ -23,7 +23,7 @@ const initialExperienceData = [
         company: "Polish-Japanese Academy of Information Technology",
         duration: "October 2023 - September 2025",
         position: "student",
-        description: "Specialized in [Thesis Topic, e.g., Distributed Systems or AI]. Served as a core team member in the Google Developer Student Club (GDSC), facilitating beginner-to-intermediate coding workshops."
+        description: "Completed a Master's Degree in Computer Science, focusing on Software Engineering, Business Processes, and Database Management (SQL/NoSQL). Created a Raspberry Pi-based smart home system featuring a smart pet door with specific pet face recognition and a SwiftUI application to manage the smart home devices as my thesis project."
     },
     {
         category: ["Coding"],
@@ -34,14 +34,14 @@ const initialExperienceData = [
         description: "Developed responsive web design HTML CSS skills, learned JavaScript, built front-end projects using React (Hooks, Redux, Routing). Gained back-end basics with Node.js and MongoDB for data handling."
     },
     // marketing
-    {
-        category: ["Marketing"],
-        title: "Student Depot ambassador",
-        company: "Student Depot",
-        duration: "December 2023 - September 2025",
-        position: "ambassador",
-        description: "promoted Student Depot with creative content"
-    },
+    // {
+    //     category: ["Marketing"],
+    //     title: "Student Depot ambassador",
+    //     company: "Student Depot",
+    //     duration: "December 2023 - September 2025",
+    //     position: "ambassador",
+    //     description: "promoted Student Depot with creative content"
+    // },
 ];
 
 const TimelineItem = ({ title, company, duration, description, position }) => (

@@ -59,7 +59,7 @@ const projects = [
 },
 {
     id: 8,
-    title: "Master's Thesis: Smart Home Automation System",
+    title: "HouseSupervisor Mobile App",
     description: "SwiftUI mobile app that controls a Raspberry Pi-based smart home system with pet face recognition, secured by a Firebase cloud architecture",
     image: thesis,
     tags: ["SwiftUI", "Python", "Raspberry Pi", "Firebase", "UI/UX Design", "IoT"]

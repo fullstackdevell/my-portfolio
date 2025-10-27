@@ -5,6 +5,7 @@ import qrCodeGenerator from '../assets/qrcodegenerator.png';
 import fretboard from '../assets/fretboard.png';
 import colorthebird from '../assets/colorthebird.png';
 import flexboxfroggy from '../assets/flexboxfroggy.png';
+import thesis from '../assets/thesis.png';
 
 const projects = [
   //   {
@@ -55,6 +56,13 @@ const projects = [
     description: "An interactive learning tool, inspired by Flexbox Froggy, where users solve CSS layout puzzles by writing Flexbox properties in a live editor to position colored frogs onto matching lily pads.",
     image: flexboxfroggy,
     tags: ["HTML", "CSS", "JavaScript"],
+},
+{
+    id: 8,
+    title: "Master's Thesis: Smart Home Automation System",
+    description: "SwiftUI mobile app that controls a Raspberry Pi-based smart home system with pet face recognition, secured by a Firebase cloud architecture",
+    image: thesis,
+    tags: ["SwiftUI", "Python", "Raspberry Pi", "Firebase", "UI/UX Design", "IoT"]
 }
 ]
 

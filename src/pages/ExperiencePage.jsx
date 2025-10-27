@@ -44,7 +44,7 @@ const initialExperienceData = [
     duration: "January 2022 - February 2023",
     position: "student",
     description:
-      "Developed responsive web design HTML CSS skills, learned JavaScript, built front-end projects using React (Hooks, Redux, Routing). Gained back-end basics with Node.js and MongoDB for data handling.",
+      "Developed responsive web design (HTML/CSS) skills, learned JavaScript, and built complex front-end projects using React (Hooks, Redux, Routing). Gained foundational back-end basics with Node.js and MongoDB for data handling. Successfully completed three real-world team projects, where I effectively applied Git/GitHub for version control and professional collaborative development, simulating a true coding environment.",
   },
   // marketing
   // {
